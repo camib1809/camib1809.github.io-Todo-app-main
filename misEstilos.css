@@ -1,0 +1,120 @@
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    background-image: url(images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
+    background-color: #2e2e2e;
+}
+
+.card{
+    box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.664);
+}
+hr{
+    width: 100%;
+    border: 1px solid #494C6B;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-weight: 700;
+    letter-spacing: 18px;
+}
+
+
+p{
+    font-weight: 700;
+    color:#707571;
+    font-size: 18px;
+}
+
+h5{
+   color: hsl(234, 39%, 85%); 
+}
+
+h6{
+    color: #707571;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+h6:hover{
+    color: hsl(234, 39%, 85%);
+}
+
+.cambio:hover{
+    color: hsl(234, 39%, 85%);
+    cursor: pointer;
+}
+
+.color{
+    background-color:  hsl(235, 24%, 19%);
+}
+
+.Blue{
+    color:  hsl(220, 98%, 61%);
+}
+
+.max-w{
+    max-width: 600px;
+}
+
+input.checkbox{
+    appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 20px;
+    height: 20px;
+    background-color:  hsl(235, 24%, 19%);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid hsl(233, 14%, 35%);
+
+}
+
+input:hover.checkbox{
+    border-image:  linear-gradient(120deg, hsl(192, 100%, 67%) 10%, hsl(280, 87%, 65%) 70%);
+    border-image-slice: 1;
+    border-radius: 100%;
+}
+
+input:checked.checkbox{
+    background: linear-gradient(120deg, hsl(192, 100%, 67%) 10%, hsl(280, 87%, 65%) 70%); 
+    content: url(images/icon-check.svg);
+
+}
+
+
+button, input, optgroup, select, textarea {
+    width: 100%;
+    background-color:  hsl(235, 24%, 19%);
+    border-style: none;
+    color:hsl(234, 39%, 85%);
+}
+
+.btn-link{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-link:hover{
+    height: 45px;
+    background-color: hsla(234, 39%, 85%, 0.295);
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+
+body{
+    background-image: url(images/bg-mobile-dark.jpg);
+    background-repeat: no-repeat;
+}
+}
