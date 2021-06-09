@@ -1,8 +1,9 @@
 
 body{
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     padding: 0;
+    margin: 0;
     background-image: url(images/bg-desktop-dark.jpg);
     background-repeat: no-repeat;
     width: 100%;
@@ -10,45 +11,56 @@ body{
     background-color: hsl(235, 21%, 11%);
 }
 
-input[type='text']{
-    background: transparent;
-    outline: none;
-    border: 0;
-}
+/*Clases para tarjetas*/
 
 .card{
-    background-color: hsl(235, 24%, 19%);
     box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.664);
 }
-hr{
-    width: 100%;
-    border: 1px solid #494C6B;
-    padding: 0;
-    margin: 0;
+
+.color{
+    background-color:  hsl(235, 24%, 19%);
 }
+
+.max-w{
+    max-width: 600px;
+}
+
+/*Linea de separacion*/
+
+.border-botom{
+    border-bottom:1px solid hsl(233, 14%, 35%);
+}
+
+/*Tipos de tamaños de letras*/
 
 h1{
     font-weight: 700;
     letter-spacing: 18px;
 }
 
-
 p{
     font-weight: 700;
     color:#707571;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 h5{
+    font-size: 15px;
    color: hsl(234, 39%, 85%); 
 }
 
 h6{
     color: #707571;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     cursor: pointer;
 }
+
+.text{
+    color: #7a1b71;
+}
+
+/*Hover textos*/
 
 h6:hover{
     color: hsl(234, 39%, 85%);
@@ -59,38 +71,50 @@ h6:hover{
     cursor: pointer;
 }
 
-.color{
-    background-color:  hsl(235, 24%, 19%);
-    min-height: 80px;
-}
-
 .Blue{
     color:  hsl(220, 98%, 61%);
 }
 
-.max-w{
-    max-width: 600px;
+/*TextTarea*/
+
+button, input, optgroup, select, textarea {
+    width: 100%;
+    background-color: transparent;
+    border-style: none;
+    outline: none;
+    color:hsl(233, 20%, 64%);
+    font-size: 18px;
 }
 
-input.checkbox{
+::placeholder { 
+    font-size: 18px;
+    color: hsl(234, 11%, 52%); 
+}
+
+/*Estilos Checkbox*/
+
+input[type="checkbox"]{
     appearance: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 25px;
-    height: 25px;
-    background-color:  hsl(235, 24%, 19%);
+    width: 20px;
+    height: 20px;
+    background-color:  transparent;
     border-radius: 50px;
     cursor: pointer;
     border: 1px solid hsl(233, 14%, 35%);
 
 }
 
-input:hover.checkbox{
-    border-radius: 50px;
+input[type="checkbox"]:hover{
+    border-radius: 100px;
     border: 2px solid transparent;
     background:  linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+    mask: 
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
     -webkit-mask: 
         linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
@@ -98,32 +122,90 @@ input:hover.checkbox{
     mask-composite: exclude;
 }
 
-input:checked.checkbox{
+input[type="checkbox"]:checked{
     background: url(images/icon-check.svg), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)); 
     background-position: center center;
     background-repeat: no-repeat;
     border: 0;
 }
 
-button, input, optgroup, select, textarea {
-    width: 100%;
-    background-color:  hsl(235, 24%, 19%);
-    border-style: none;
-    outline: none;
-    color:hsl(234, 39%, 85%);
+input[type="checkbox"]:checked + h5{
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
 }
 
-.btn-link{
-    text-decoration: none;
+/*Icono de equis*/
+.cross{
+    width: 18px;
+    height: 16px;
+    background-image: url(images/icon-cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
-    padding: 0;
+    opacity: .5;
 }
 
-.btn-link:hover{
-    height: 45px;
-    background-color: hsla(234, 39%, 85%, 0.295);
-    border-radius: 50px;
+.cross:hover{
+    opacity: 1;
 }
+
+/*Light Mode*/
+
+body.light{
+    background-image: url(images/bg-desktop-light.jpg);
+    background-color: hsl(0, 0%, 98%);
+}
+
+body.light .card{
+    box-shadow: 3px 5px 20px 0px rgba(66, 66, 66, 0.664);
+}
+
+body.light .border-botom{
+    border: 1px solid hsl(236, 33%, 92%);
+}
+
+body.light h5{
+    color: hsl(235, 19%, 35%);
+}
+
+body.light p{
+    color:hsl(236, 9%, 61%);
+}
+
+body.light h6{
+    color:hsl(236, 9%, 61%);
+}
+
+body.light h6:hover{
+    Color: #707571;
+}
+
+body.light .cambio:hover{
+    Color: #707571
+}
+
+body.light .color{
+    background-color: hsl(0, 0%, 98%);
+}
+
+body.light input.checkbox{
+    border: 1px solid hsl(235, 11%, 76%);
+}
+
+body.light input:checked.checkbox + h5{
+    color: hsl(235, 10%, 76%);
+}
+
+body.light input:hover.checkbox{
+    border: 2px solid transparent;
+    background:  linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+}
+
+body.light ::placeholder{
+    color:hsl(235, 12%, 83%);
+} 
+
+/*Cambio de tamaño de pantalla*/
 
 @media only screen and (max-width: 800px) {
 
@@ -131,4 +213,28 @@ body{
     background-image: url(images/bg-mobile-dark.jpg);
     background-repeat: no-repeat;
 }
+
+body.light{
+    background-image: url(images/bg-mobile-light.jpg);
 }
+}
+
+/*Colores*/
+
+/*Light Theme*/
+
+Very Light Gray{color: hsl(0, 0%, 98%);} 
+Very Light Grayish Blue{color: hsl(236, 33%, 92%);} 
+Light Grayish Blue{color: hsl(233, 11%, 84%);} 
+Dark Grayish Blue{color: hsl(236, 9%, 61%);} 
+;Very Dark Grayish Blue{color: hsl(235, 19%, 35%);} 
+
+/*Dark Theme*/
+
+Very Dark Blue{color: hsl(235, 21%, 11%);} 
+Very Dark Desaturated Blue{color: hsl(235, 24%, 19%);} 
+Light Grayish Blue{color: hsl(234, 39%, 85%);} 
+Light Grayish Blue hover{color: hsl(236, 33%, 92%);} 
+Dark Grayish Blue{ color: hsl(234, 11%, 52%);}
+Very Dark Grayish Blue{color: hsl(233, 14%, 35%);} 
+Very Dark Grayish Blue{color: hsl(237, 14%, 26%);} 
